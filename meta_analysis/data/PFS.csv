@@ -1,0 +1,15 @@
+﻿Trial,TE,LCI,UCI,Treat,isReport,isNew,isAsia,isChina
+DB04,0.51,0.4,0.64,TDxd,1,1,0,0
+DB04,NA,NA,NA,Chem,1,1,0,0
+DB04_Asia,0.41,0.28,0.58,TDxd,0,0,1,1
+DB04_Asia,NA,NA,NA,Chem,0,0,1,1
+T02,0.65,0.53,0.81,SG,1,1,0,0
+T02,NA,NA,NA,Chem,1,1,0,0
+EVER,0.67,0.52,0.87,SG,0,1,1,1
+EVER,NA,NA,NA,Chem,0,1,1,1
+TB01,0.63,0.52,0.76,Dato,1,1,0,0
+TB01,NA,NA,NA,Chem,1,1,0,0
+TB01_China,0.54,0.3,0.96,Dato,0,0,0,1
+TB01_China,NA,NA,NA,Chem,0,0,0,1
+TB01_Asia,0.69,0.51,0.94,Dato,0,0,1,0
+TB01_Asia,NA,NA,NA,Chem,0,0,1,0

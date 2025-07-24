@@ -1,0 +1,11 @@
+`.RNG.name` <- "base::Marsaglia-Multicarry"
+`.RNG.state` <- 
+c(874557788L,498762683L)
+`alpha` <- 
+2.2676
+`beta1` <- 
+1.06431
+`beta2` <- 
+-2.97984
+`tau` <- 
+1.16485

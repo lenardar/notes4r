@@ -1,0 +1,4 @@
+1	bugs::ConjugateNormal	alpha
+2	base::RealSlicer	beta1
+3	base::RealSlicer	beta2
+4	bugs::ConjugateGamma	tau

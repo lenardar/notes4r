@@ -1,0 +1,17 @@
+﻿study,code,trtcode,treatment,mean,sd,n
+1,Lieberman 1997,1,Placebo,-0.7,3.7,172
+1,Lieberman 1997,2,Pramipexole,-2.4,3.4,173
+2,Gutttman 1997,1,Placebo,-0.3,4.4,76
+2,Gutttman 1997,2,Pramipexole,-2.6,4.3,71
+2,Gutttman 1997,4,Bromocriptine,-1.2,4.3,81
+3,Lieberman 1998,1,Placebo,-1.22,3.7,54
+3,Lieberman 1998,3,Ropinirole,-1.53,4.28,95
+4,Brunt 2002A,3,Ropinirole,-0.24,3,128
+4,Brunt 2002A,4,Bromocriptine,-0.59,3,72
+5,Brunt 2002B,3,Ropinirole,-0.73,3,80
+5,Brunt 2002B,4,Bromocriptine,-0.18,3,46
+6,Gershanik 1994a,4,Bromocriptine,-1.8,2.48,154
+6,Gershanik 1994a,5,Cabergoline,-2.1,2.99,143
+7,Gershanik 1994b,4,Bromocriptine,-2.2,2.31,137
+7,Gershanik 1994b,5,Cabergoline,-2.5,2.18,131
+,,,,,,

@@ -1,0 +1,506 @@
+<!-- preamble start -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_5rhybq9gbhjhpg03serd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<!-- preamble end -->
+
+    <script>
+
+      function styleCell_5rhybq9gbhjhpg03serd(i, j, css_id) {
+          var table = document.getElementById("tinytable_5rhybq9gbhjhpg03serd");
+          var cell = table.rows[i]?.cells[j];  // Safe navigation to avoid errors
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_5rhybq9gbhjhpg03serd');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_5rhybq9gbhjhpg03serd(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_5rhybq9gbhjhpg03serd");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: 35, j: 4 }, { i: 35, j: 7 }, { i: 35, j: 3 }, { i: 35, j: 6 }, { i: 35, j: 1 }, { i: 35, j: 2 }, { i: 35, j: 5 }, { i: 35, j: 8 },  ], css_id: 'tinytable_css_nk823bm1j4nlh5oadtwb',}, 
+          { positions: [ { i: 28, j: 2 }, { i: 28, j: 1 }, { i: 28, j: 6 }, { i: 28, j: 8 }, { i: 28, j: 5 }, { i: 28, j: 7 }, { i: 28, j: 4 }, { i: 28, j: 3 },  ], css_id: 'tinytable_css_h72rkfmqf36ux2zk4ssn',}, 
+          { positions: [ { i: 1, j: 1 }, { i: 5, j: 1 }, { i: 4, j: 1 }, { i: 9, j: 1 }, { i: 8, j: 1 }, { i: 13, j: 1 }, { i: 14, j: 1 }, { i: 2, j: 1 }, { i: 3, j: 1 }, { i: 17, j: 1 }, { i: 18, j: 1 }, { i: 6, j: 1 }, { i: 7, j: 1 }, { i: 21, j: 1 }, { i: 22, j: 1 }, { i: 10, j: 1 }, { i: 11, j: 1 }, { i: 25, j: 1 }, { i: 26, j: 1 }, { i: 27, j: 1 }, { i: 15, j: 1 }, { i: 29, j: 1 }, { i: 30, j: 1 }, { i: 31, j: 1 }, { i: 19, j: 1 }, { i: 33, j: 1 }, { i: 34, j: 1 }, { i: 3, j: 3 }, { i: 23, j: 1 }, { i: 1, j: 2 }, { i: 2, j: 2 }, { i: 3, j: 2 }, { i: 4, j: 2 }, { i: 5, j: 2 }, { i: 6, j: 2 }, { i: 7, j: 2 }, { i: 8, j: 2 }, { i: 9, j: 2 }, { i: 10, j: 2 }, { i: 11, j: 2 }, { i: 12, j: 2 }, { i: 13, j: 2 }, { i: 14, j: 2 }, { i: 15, j: 2 }, { i: 12, j: 1 }, { i: 17, j: 2 }, { i: 18, j: 2 }, { i: 19, j: 2 }, { i: 16, j: 1 }, { i: 21, j: 2 }, { i: 22, j: 2 }, { i: 23, j: 2 }, { i: 20, j: 1 }, { i: 25, j: 2 }, { i: 26, j: 2 }, { i: 27, j: 2 }, { i: 24, j: 1 }, { i: 29, j: 2 }, { i: 30, j: 2 }, { i: 31, j: 2 }, { i: 32, j: 2 }, { i: 33, j: 2 }, { i: 34, j: 2 }, { i: 3, j: 4 }, { i: 32, j: 1 }, { i: 1, j: 3 }, { i: 2, j: 3 }, { i: 7, j: 4 }, { i: 4, j: 3 }, { i: 5, j: 3 }, { i: 6, j: 3 }, { i: 7, j: 3 }, { i: 8, j: 3 }, { i: 9, j: 3 }, { i: 10, j: 3 }, { i: 11, j: 3 }, { i: 12, j: 3 }, { i: 13, j: 3 }, { i: 14, j: 3 }, { i: 15, j: 3 }, { i: 16, j: 3 }, { i: 17, j: 3 }, { i: 18, j: 3 }, { i: 19, j: 3 }, { i: 16, j: 2 }, { i: 21, j: 3 }, { i: 22, j: 3 }, { i: 23, j: 3 }, { i: 20, j: 2 }, { i: 25, j: 3 }, { i: 26, j: 3 }, { i: 27, j: 3 }, { i: 24, j: 2 }, { i: 29, j: 3 }, { i: 30, j: 3 }, { i: 31, j: 3 }, { i: 32, j: 3 }, { i: 33, j: 3 }, { i: 34, j: 3 }, { i: 3, j: 5 }, { i: 4, j: 5 }, { i: 1, j: 4 }, { i: 2, j: 4 }, { i: 7, j: 5 }, { i: 4, j: 4 }, { i: 5, j: 4 }, { i: 6, j: 4 }, { i: 11, j: 5 }, { i: 8, j: 4 }, { i: 9, j: 4 }, { i: 10, j: 4 }, { i: 11, j: 4 }, { i: 12, j: 4 }, { i: 13, j: 4 }, { i: 14, j: 4 }, { i: 15, j: 4 }, { i: 16, j: 4 }, { i: 17, j: 4 }, { i: 18, j: 4 }, { i: 19, j: 4 }, { i: 20, j: 4 }, { i: 21, j: 4 }, { i: 22, j: 4 }, { i: 23, j: 4 }, { i: 20, j: 3 }, { i: 25, j: 4 }, { i: 26, j: 4 }, { i: 27, j: 4 }, { i: 24, j: 3 }, { i: 29, j: 4 }, { i: 30, j: 4 }, { i: 31, j: 4 }, { i: 32, j: 4 }, { i: 33, j: 4 }, { i: 34, j: 4 }, { i: 3, j: 6 }, { i: 4, j: 6 }, { i: 1, j: 5 }, { i: 2, j: 5 }, { i: 7, j: 6 }, { i: 8, j: 6 }, { i: 5, j: 5 }, { i: 6, j: 5 }, { i: 11, j: 6 }, { i: 8, j: 5 }, { i: 9, j: 5 }, { i: 10, j: 5 }, { i: 15, j: 6 }, { i: 12, j: 5 }, { i: 13, j: 5 }, { i: 14, j: 5 }, { i: 15, j: 5 }, { i: 16, j: 5 }, { i: 17, j: 5 }, { i: 18, j: 5 }, { i: 19, j: 5 }, { i: 20, j: 5 }, { i: 21, j: 5 }, { i: 22, j: 5 }, { i: 23, j: 5 }, { i: 24, j: 5 }, { i: 25, j: 5 }, { i: 26, j: 5 }, { i: 27, j: 5 }, { i: 24, j: 4 }, { i: 29, j: 5 }, { i: 30, j: 5 }, { i: 31, j: 5 }, { i: 32, j: 5 }, { i: 33, j: 5 }, { i: 34, j: 5 }, { i: 3, j: 7 }, { i: 4, j: 7 }, { i: 1, j: 6 }, { i: 2, j: 6 }, { i: 7, j: 7 }, { i: 8, j: 7 }, { i: 5, j: 6 }, { i: 6, j: 6 }, { i: 11, j: 7 }, { i: 12, j: 7 }, { i: 9, j: 6 }, { i: 10, j: 6 }, { i: 15, j: 7 }, { i: 12, j: 6 }, { i: 13, j: 6 }, { i: 14, j: 6 }, { i: 19, j: 7 }, { i: 16, j: 6 }, { i: 17, j: 6 }, { i: 18, j: 6 }, { i: 19, j: 6 }, { i: 20, j: 6 }, { i: 21, j: 6 }, { i: 22, j: 6 }, { i: 23, j: 6 }, { i: 24, j: 6 }, { i: 25, j: 6 }, { i: 26, j: 6 }, { i: 27, j: 6 }, { i: 32, j: 7 }, { i: 29, j: 6 }, { i: 30, j: 6 }, { i: 31, j: 6 }, { i: 32, j: 6 }, { i: 33, j: 6 }, { i: 34, j: 6 }, { i: 3, j: 8 }, { i: 4, j: 8 }, { i: 1, j: 7 }, { i: 2, j: 7 }, { i: 7, j: 8 }, { i: 8, j: 8 }, { i: 5, j: 7 }, { i: 6, j: 7 }, { i: 11, j: 8 }, { i: 12, j: 8 }, { i: 9, j: 7 }, { i: 10, j: 7 }, { i: 15, j: 8 }, { i: 16, j: 8 }, { i: 13, j: 7 }, { i: 14, j: 7 }, { i: 19, j: 8 }, { i: 16, j: 7 }, { i: 17, j: 7 }, { i: 18, j: 7 }, { i: 23, j: 8 }, { i: 20, j: 7 }, { i: 21, j: 7 }, { i: 22, j: 7 }, { i: 23, j: 7 }, { i: 24, j: 7 }, { i: 25, j: 7 }, { i: 26, j: 7 }, { i: 27, j: 7 }, { i: 32, j: 8 }, { i: 29, j: 7 }, { i: 30, j: 7 }, { i: 31, j: 7 }, { i: 9, j: 8 }, { i: 33, j: 7 }, { i: 34, j: 7 }, { i: 25, j: 8 }, { i: 13, j: 8 }, { i: 1, j: 8 }, { i: 2, j: 8 }, { i: 29, j: 8 }, { i: 17, j: 8 }, { i: 5, j: 8 }, { i: 6, j: 8 }, { i: 20, j: 8 }, { i: 21, j: 8 }, { i: 22, j: 8 }, { i: 10, j: 8 }, { i: 24, j: 8 }, { i: 33, j: 8 }, { i: 26, j: 8 }, { i: 14, j: 8 }, { i: 27, j: 8 }, { i: 30, j: 8 }, { i: 18, j: 8 }, { i: 31, j: 8 }, { i: 34, j: 8 },  ], css_id: 'tinytable_css_5y14oudyh5rboh38zobl',}, 
+          { positions: [ { i: 0, j: 1 }, { i: 0, j: 4 }, { i: 0, j: 7 }, { i: 0, j: 8 }, { i: 0, j: 3 }, { i: 0, j: 6 }, { i: 0, j: 2 }, { i: 0, j: 5 },  ], css_id: 'tinytable_css_p3ra86ih71b7p5ur3n05',}, 
+          { positions: [ { i: 35, j: 0 },  ], css_id: 'tinytable_css_pthbovaymrd5kx1esi1l',}, 
+          { positions: [ { i: 28, j: 0 },  ], css_id: 'tinytable_css_jzwc3fx69tvxzwz9u7v5',}, 
+          { positions: [ { i: 1, j: 0 }, { i: 2, j: 0 }, { i: 3, j: 0 }, { i: 4, j: 0 }, { i: 5, j: 0 }, { i: 6, j: 0 }, { i: 7, j: 0 }, { i: 8, j: 0 }, { i: 9, j: 0 }, { i: 10, j: 0 }, { i: 11, j: 0 }, { i: 12, j: 0 }, { i: 13, j: 0 }, { i: 14, j: 0 }, { i: 15, j: 0 }, { i: 16, j: 0 }, { i: 17, j: 0 }, { i: 18, j: 0 }, { i: 19, j: 0 }, { i: 20, j: 0 }, { i: 21, j: 0 }, { i: 22, j: 0 }, { i: 23, j: 0 }, { i: 24, j: 0 }, { i: 25, j: 0 }, { i: 26, j: 0 }, { i: 27, j: 0 }, { i: 32, j: 0 }, { i: 29, j: 0 }, { i: 30, j: 0 }, { i: 31, j: 0 }, { i: 33, j: 0 }, { i: 34, j: 0 },  ], css_id: 'tinytable_css_mthnxz1pmppzxbyyiazm',}, 
+          { positions: [ { i: 0, j: 0 },  ], css_id: 'tinytable_css_rcqkhlgkkx0stqh73tb9',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_5rhybq9gbhjhpg03serd(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_nk823bm1j4nlh5oadtwb, .table th.tinytable_css_nk823bm1j4nlh5oadtwb { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_h72rkfmqf36ux2zk4ssn, .table th.tinytable_css_h72rkfmqf36ux2zk4ssn { text-align: center; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_5y14oudyh5rboh38zobl, .table th.tinytable_css_5y14oudyh5rboh38zobl { text-align: center; }
+      .table td.tinytable_css_p3ra86ih71b7p5ur3n05, .table th.tinytable_css_p3ra86ih71b7p5ur3n05 { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_pthbovaymrd5kx1esi1l, .table th.tinytable_css_pthbovaymrd5kx1esi1l { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_jzwc3fx69tvxzwz9u7v5, .table th.tinytable_css_jzwc3fx69tvxzwz9u7v5 { text-align: left; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_mthnxz1pmppzxbyyiazm, .table th.tinytable_css_mthnxz1pmppzxbyyiazm { text-align: left; }
+      .table td.tinytable_css_rcqkhlgkkx0stqh73tb9, .table th.tinytable_css_rcqkhlgkkx0stqh73tb9 { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_5rhybq9gbhjhpg03serd" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <thead>
+        
+              <tr>
+                <th scope="col"> </th>
+                <th scope="col">fm1</th>
+                <th scope="col">fm2</th>
+                <th scope="col">fm3</th>
+                <th scope="col">fm4</th>
+                <th scope="col">fm5</th>
+                <th scope="col">fm6</th>
+                <th scope="col">fm7</th>
+                <th scope="col">fm8</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>(Intercept)</td>
+                  <td>5.831 [5.653, 6.009] ***</td>
+                  <td>5.831 [5.653, 6.009] ***</td>
+                  <td>5.904 [5.734, 6.073] ***</td>
+                  <td>5.904 [5.734, 6.074] ***</td>
+                  <td>6.093 [5.879, 6.307] ***</td>
+                  <td>6.093 [5.879, 6.307] ***</td>
+                  <td>5.762 [5.098, 6.426] ***</td>
+                  <td>5.904 [5.734, 6.073] ***</td>
+                </tr>
+                <tr>
+                  <td>tillageNT</td>
+                  <td>0.353 [0.220, 0.487] ***</td>
+                  <td>0.353 [0.220, 0.487] ***</td>
+                  <td>0.334 [0.206, 0.462] ***</td>
+                  <td>0.334 [0.206, 0.463] ***</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.253 [<U+2212>0.035, 0.540] +</td>
+                  <td>0.334 [0.206, 0.462] ***</td>
+                </tr>
+                <tr>
+                  <td>tillagePT</td>
+                  <td>0.082 [<U+2212>0.053, 0.217]</td>
+                  <td>0.082 [<U+2212>0.053, 0.217]</td>
+                  <td>0.061 [<U+2212>0.118, 0.240]</td>
+                  <td>0.061 [<U+2212>0.119, 0.241]</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.080 [<U+2212>0.140, 0.301]</td>
+                  <td>0.061 [<U+2212>0.118, 0.240]</td>
+                </tr>
+                <tr>
+                  <td>tillageWL</td>
+                  <td>0.379 [0.251, 0.507] ***</td>
+                  <td>0.379 [0.251, 0.507] ***</td>
+                  <td>0.376 [0.208, 0.544] ***</td>
+                  <td>0.376 [0.208, 0.545] ***</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.200 [<U+2212>0.089, 0.489]</td>
+                  <td>0.376 [0.208, 0.544] ***</td>
+                </tr>
+                <tr>
+                  <td>AP</td>
+                  <td><U+2212>0.024 [<U+2212>0.029, <U+2212>0.019] ***</td>
+                  <td><U+2212>1.024 [<U+2212>1.029, <U+2212>1.019] ***</td>
+                  <td><U+2212>0.026 [<U+2212>0.030, <U+2212>0.022] ***</td>
+                  <td><U+2212>0.026 [<U+2212>0.030, <U+2212>0.022] ***</td>
+                  <td><U+2212>0.026 [<U+2212>0.031, <U+2212>0.021] ***</td>
+                  <td><U+2212>0.026 [<U+2212>0.031, <U+2212>0.021] ***</td>
+                  <td><U+2212>0.022 [<U+2212>0.042, <U+2212>0.003] *</td>
+                  <td><U+2212>0.026 [<U+2212>0.030, <U+2212>0.022] ***</td>
+                </tr>
+                <tr>
+                  <td>SD (Observations)</td>
+                  <td>0.133</td>
+                  <td>0.133</td>
+                  <td>0.121</td>
+                  <td>0.121</td>
+                  <td>0.135</td>
+                  <td>0.135</td>
+                  <td>0.110</td>
+                  <td>0.121</td>
+                </tr>
+                <tr>
+                  <td>SD (Intercept depth)</td>
+                  <td>0.050</td>
+                  <td>0.050</td>
+                  <td>0.071</td>
+                  <td>0.000</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.525</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>SD (tillageNT depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.029</td>
+                  <td>0.101</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.208</td>
+                  <td>0.101</td>
+                </tr>
+                <tr>
+                  <td>SD (tillagePT depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.108</td>
+                  <td>0.056</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.153</td>
+                  <td>0.056</td>
+                </tr>
+                <tr>
+                  <td>SD (tillageWL depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.098</td>
+                  <td>0.027</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.206</td>
+                  <td>0.027</td>
+                </tr>
+                <tr>
+                  <td>Cor (Intercept~tillageNT depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>1.000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Cor (Intercept~tillagePT depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.884</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>1.000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Cor (Intercept~tillageWL depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.999</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>1.000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Cor (tillageNT~tillagePT depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.884</td>
+                  <td><U+2212>0.429</td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td><U+2212>0.429</td>
+                </tr>
+                <tr>
+                  <td>Cor (tillageNT~tillageWL depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.999</td>
+                  <td><U+2212>0.982</td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td><U+2212>0.982</td>
+                </tr>
+                <tr>
+                  <td>Cor (tillagePT~tillageWL depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.908</td>
+                  <td>0.592</td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td>0.593</td>
+                </tr>
+                <tr>
+                  <td>SD (tillageCK depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>0.071</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>0.071</td>
+                </tr>
+                <tr>
+                  <td>Cor (tillageCK~tillageNT depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                </tr>
+                <tr>
+                  <td>Cor (tillageCK~tillagePT depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.429</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.429</td>
+                </tr>
+                <tr>
+                  <td>Cor (tillageCK~tillageWL depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.982</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>0.982</td>
+                </tr>
+                <tr>
+                  <td>SD (AP depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>0.015</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Cor (Intercept~AP depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><U+2212>1.000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Cor (tillageNT~AP depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Cor (tillagePT~AP depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Cor (tillageWL~AP depth)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1.000</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>SD (Intercept condition)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>0.069</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>SD (Intercept depthtillage)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>0.069</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>SD (Intercept tillage)</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>0.153</td>
+                  <td>0.153</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Num.Obs.</td>
+                  <td>36</td>
+                  <td>36</td>
+                  <td>36</td>
+                  <td>36</td>
+                  <td>36</td>
+                  <td>36</td>
+                  <td>36</td>
+                  <td>36</td>
+                </tr>
+                <tr>
+                  <td>R2 Marg.</td>
+                  <td>0.861</td>
+                  <td>1.000</td>
+                  <td>0.907</td>
+                  <td>0.907</td>
+                  <td>0.705</td>
+                  <td>0.705</td>
+                  <td>0.888</td>
+                  <td>0.907</td>
+                </tr>
+                <tr>
+                  <td>R2 Cond.</td>
+                  <td>0.878</td>
+                  <td>1.000</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.884</td>
+                  <td>0.884</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>AIC</td>
+                  <td>0.4</td>
+                  <td>0.4</td>
+                  <td>14.7</td>
+                  <td>16.7</td>
+                  <td><U+2212>3.6</td>
+                  <td><U+2212>3.6</td>
+                  <td>20.3</td>
+                  <td>14.7</td>
+                </tr>
+                <tr>
+                  <td>BIC</td>
+                  <td>11.5</td>
+                  <td>11.5</td>
+                  <td>40.0</td>
+                  <td>43.6</td>
+                  <td>4.3</td>
+                  <td>4.3</td>
+                  <td>53.6</td>
+                  <td>40.0</td>
+                </tr>
+                <tr>
+                  <td>ICC</td>
+                  <td>0.1</td>
+                  <td>0.1</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.6</td>
+                  <td>0.6</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>RMSE</td>
+                  <td>0.13</td>
+                  <td>0.13</td>
+                  <td>0.12</td>
+                  <td>0.12</td>
+                  <td>0.12</td>
+                  <td>0.12</td>
+                  <td>0.11</td>
+                  <td>0.12</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- postamble start -->
+  </body>
+
+</html>
+<!-- postamble end -->
+<!-- hack to avoid NA insertion in last line -->

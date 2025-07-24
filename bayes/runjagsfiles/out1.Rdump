@@ -1,0 +1,11 @@
+`.RNG.name` <- "base::Wichmann-Hill"
+`.RNG.state` <- 
+c(10006L,5149L,3564L)
+`alpha` <- 
+1.88634
+`beta1` <- 
+1.12308
+`beta2` <- 
+-2.84948
+`tau` <- 
+1.19891

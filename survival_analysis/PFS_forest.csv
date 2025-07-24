@@ -1,0 +1,19 @@
+﻿Label,HR,LCI,UCI,NMA HR,Treat
+NA,NA,NA,NA,NA,NA
+Base Case,NA,NA,NA,NA,NA
+Datopotamab deruxtecan  vs. IC/PC,0.63,0.52,0.76,"0.63 (0.52, 0.76)", IC/PC
+Datopotamab deruxtecan vs. Sacituzumab govitecan,0.96,0.75,1.24,"0.96 (0.75, 1.24)",Sacituzumab govitecan
+Datopotamab deruxtecan vs. Trastuzumab deruxtecan,1.23,0.91,1.66,"1.23 (0.91, 1.66)",Trastuzumab deruxtecan
+NA,NA,NA,NA,NA,NA
+HER2-zero patients only,NA,NA,NA,NA,NA
+Datopotamab deruxtecan  vs. IC/PC,0.6,0.42,0.86,"0.60 (0.42, 0.86)", IC/PC
+Datopotamab deruxtecan vs. Sacituzumab govitecan,0.91,0.58,1.42,"0.91 (0.58, 1.42)",Sacituzumab govitecan
+NA,NA,NA,NA,NA,NA
+HER2-low patients only,NA,NA,NA,NA,NA
+Datopotamab deruxtecan  vs. IC/PC,0.7,0.52,0.94,"0.70 (0.52, 0.94)", IC/PC
+Datopotamab deruxtecan vs. Sacituzumab govitecan,1.05,0.73,1.52,"1.05 (0.73, 1.52)",Sacituzumab govitecan
+Datopotamab deruxtecan vs. Trastuzumab deruxtecan,1.37,0.94,2,"1.37 (0.94, 2.00)",Trastuzumab deruxtecan
+NA,NA,AN,NA,NA,NA
+2 prior lines of chemotherapy in metastatic setting,NA,AN,NA,NA,NA
+Datopotamab deruxtecan  vs. IC/PC,0.6,0.45,0.8,"0.60 (0.45, 0.80)", IC/PC
+Datopotamab deruxtecan vs. Sacituzumab govitecan,0.93,0.64,1.35,"0.93 (0.64, 1.35)",Sacituzumab govitecan
